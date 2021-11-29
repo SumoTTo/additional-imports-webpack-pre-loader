@@ -1,0 +1,59 @@
+{
+	"name": "@sumotto/additional-imports-webpack-pre-loader",
+	"version": "0.0.0",
+	"description": "Adds additional imports to the end of the processed file according to the passed global paths.",
+	"keywords": [
+		"additional",
+		"imports",
+		"webpack",
+		"pre-loader"
+	],
+	"homepage": "https://github.com/SumoTTo/additional-imports-webpack-pre-loader#readme",
+	"bugs": {
+		"url": "https://github.com/SumoTTo/additional-imports-webpack-pre-loader/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/SumoTTo/additional-imports-webpack-pre-loader.git"
+	},
+	"funding": "https://ko-fi.com/SumoTTo",
+	"license": "MIT",
+	"author": {
+		"name": "Sigalin Kirill",
+		"email": "sumotto@yandex.ru",
+		"url": "https://sumotto.ru"
+	},
+	"scripts": {
+		"lint": "eslint {scripts,src,test}/**/*.js",
+		"fix": "eslint {scripts,src,test}/**/*.js --fix",
+		"test": "npm run lint",
+		"build": "node build",
+		"prepare": "husky install",
+		"prepublishOnly": "npm run build",
+		"releaseTests": "npm run lint",
+		"releasePreview": "cross-env HUSKY=0 np --preview --test-script=releaseTests",
+		"release": "cross-env HUSKY=0 np --test-script=releaseTests"
+	},
+	"main": "dist/index.js",
+	"files": [
+		"dist/"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"dependencies": {
+		"glob": "latest",
+		"schema-utils": "latest"
+	},
+	"peerDependencies": {
+		"webpack": "^5"
+	},
+	"devDependencies": {
+		"@wordpress/eslint-plugin": "latest",
+		"cross-env": "latest",
+		"eslint": "latest",
+		"husky": "latest",
+		"np": "latest",
+		"terser": "latest"
+	}
+}
