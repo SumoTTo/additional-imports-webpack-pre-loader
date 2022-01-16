@@ -1,6 +1,6 @@
 {
 	"name": "@sumotto/additional-imports-webpack-pre-loader",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Adds additional imports to the end of the processed file according to the passed global paths.",
 	"keywords": [
 		"additional",
