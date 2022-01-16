@@ -8,4 +8,5 @@
  * @property {Function} async         - Tells the loader-runner that the loader intends to call back asynchronously.
  * @property {boolean}  sourceMap     - Tells if source map should be generated.
  * @property {Function} addDependency - Add a file as dependency of the loader result in order to make them watchable.
+ * @property {boolean}  hot           - Information about HMR for loaders.
  */

@@ -42,8 +42,9 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"glob": "latest",
-		"schema-utils": "latest"
+		"chokidar": "*",
+		"glob": "*",
+		"schema-utils": "*"
 	},
 	"peerDependencies": {
 		"webpack": "^5"

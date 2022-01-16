@@ -19,7 +19,7 @@ class AdditionalImportWebpackPreLoaderOptions {
 			},
 			magicComments: {
 				description: 'Webpack magic comments for all imports.',
-				type: 'string',
+				anyOf: [ { type: 'string' }, { instanceof: 'Function' } ],
 			},
 			pathCheck: {
 				description:
@@ -62,10 +62,6 @@ class AdditionalImportWebpackPreLoaderOptions {
 			} else {
 				this[ optionKey ] = option;
 			}
-		}
-
-		if ( this.magicComments ) {
-			this.magicComments = '/* ' + this.magicComments + ' */';
 		}
 	}
 }
